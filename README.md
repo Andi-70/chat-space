@@ -37,7 +37,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false, unique|
+|name|string|null: false, unique|
 ### Association
 - has_many :messages
 - has_many :members
@@ -55,7 +55,7 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text| |
 |image|string| |
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
