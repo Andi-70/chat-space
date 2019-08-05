@@ -1,0 +1,22 @@
+.side-bar {
+  width: 300px;
+  position: relative;
+  //font-weight: bold;
+  color: #ffffff;
+  .header{
+    background-color: $side_blue_dark;
+    height: 100px;
+    width: 300px;
+    padding: 0 20px;
+    line-height: 100px;
+    position: fixed;
+  }
+  .groups{
+    background-color: $side_blue_light;
+    height: calc(100vh - 100px);
+    width: 300px;
+    padding: 0 20px;
+    position: fixed;
+    top: 100px;
+  }
+}
