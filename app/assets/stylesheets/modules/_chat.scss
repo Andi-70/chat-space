@@ -1,22 +1,26 @@
 .chat {
   width: calc(100vw - 300px);
   position: relative;
-  box-sizing: border-box;
   .header{
-    padding: 0 40px;
+    box-sizing: border-box;
     height: 100px;
-    width: calc(100vw - 300px);
+    padding: 0 40px;
+    width: calc(100vw - 300px); //模範解答だとこれないけど、入れないと左右いっぱいに広がらないよね？
     position: fixed;
-    background-color: #FFFFFF;
-    //border-bottom: solid, 1px, #eeeeee;
+    //background-color: $white;
+    //border-bottom: solid, 1px, #eeeeee; //これも設定してもなぜかキャンセルされてしまう
     .left-header{
-      padding-top: 35px;
       float: left;
       &__title{
+        color: #333;
         font-size: 20px;
+        margin-top: 35px;
       }
       &__members{
+        color: #999;
+        display: flex;
         font-size: 12px;
+        margin-top: 15px;
         .member{
           display: inline-block;
           padding-right: 5px;
@@ -24,35 +28,48 @@
       }
     }
     .right-header{
-      margin-top: 28px;
-      margin-right: 40px;
+      border: 1px solid $light_blue;
+      color: $light_blue;
       float: right;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
       padding: 0 20px;
     }
   }
   .messages{
-    padding: 100px 40px 90px;
     background-color: #fafafa;
-    padding: 0 40px;
+    box-sizing: border-box;
+    padding: 46px 40px 90px;
+    height: calc(100% - 100px -90px);
+    .message{
+      .upper-message{
+        display: flex;
+      }
+    }
+    .lower-message{
+      margin-top: 10px;
+    }
   }
   .form{
+    background-color: #ddd;
+    box-sizing: border-box;
+    height: 90px;
     padding: 20px 50px 20px 40px;
     width: calc(100vw - 300px);
-    height: 90px;
-    background-color: #ddd;
     position: fixed;
     bottom: 0;
     &__message{
-      padding-left: 10px;
-      height: 50px;
-      line-height: 50px;
+      border: none;
       float: left;
+      height: 50px;
       width: calc(100% - 150px);
     }
     &__mask{
+      background-color: $white;
       float: left;
-      padding-right: 10px;
       height: 50px;
+      padding-right: 10px;
       &__image{
         font-size: 20px;
         line-height: 50px;
@@ -62,12 +79,14 @@
       }
     }
     &__submit{
-      height: 50px;
+      background-color: $light_blue;
       border: none;
+      color: $white;
       float:right;
+      font-size: 16px;
+      height: 50px;
       margin-left: 15px;
       padding: 0 30px;
-      background-color: $light-blue;
     }
   }
 }

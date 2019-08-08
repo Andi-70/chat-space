@@ -1,9 +1,12 @@
 $prefixes: -webkit-, -moz-, -ms-, -o-, '';
 
 @mixin flexbox {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
+  //display: -webkit-flex;
+  //display: -moz-flex;
+  //display: -ms-flex;
+  //display: -o-flex;
+  //display: flex;
+  @each $prefix in $prefixes {
+    display: #{$prefix}flex;
+  }
 }
