@@ -2,14 +2,11 @@
   box-sizing: border-box;
   color: $white;
   width: 300px;
-  //position: relative;
   .header{
     background-color: $side_blue_dark;
     height: 100px;
     line-height: 100px;
     padding: 0 20px;
-    //width: 300px;
-    //position: fixed;
     &__name{
       display: inline-block;
       font-size: $side_header_font;
@@ -30,10 +27,7 @@
   .groups{
     background-color: $side_blue_light;
     height: calc(100vh - 100px);
-    //width: 300px;
     padding: 0 20px;
-    //position: fixed;
-    //top: 100px;
     .group{
       box-sizing: border-box;
       padding: 20px 0 40px;
