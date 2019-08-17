@@ -4,6 +4,7 @@
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
+    border-bottom: solid 1px #eee;
     .left-header{
       float: left;
       &__title{
@@ -36,7 +37,8 @@
     background-color: #fafafa;
     box-sizing: border-box;
     padding: 46px 40px 0;
-    height: calc(100% - 100px - 90px);
+    height: calc(100vh - 190px);
+    overflow: scroll;
     .message{
       .upper-message{
         display: flex;
